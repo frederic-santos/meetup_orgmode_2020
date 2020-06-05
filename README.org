@@ -28,7 +28,7 @@ Une seule ressource essentielle : la [[https://www.youtube.com/playlist?list=PLV
 
 ** Fonctionnalités GTD avancées avec Org mode
 Quelques billets de blog pour les fonctionnalités d'agenda et de gestion des tâches avec Org mode :
-- [[http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner/][Org mode a day planner]]
+- [[http://www.newartisans.com/2007/08/using-org-mode-as-a-day-planner/][Org mode as a day planner]]
 - [[http://members.optusnet.com.au/~charles57/GTD/datetree.html][Capture mode and Date Trees in org-mode]]
 
 ** Programmation lettrée avec Org babel
