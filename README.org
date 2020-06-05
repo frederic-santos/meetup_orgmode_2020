@@ -24,7 +24,9 @@ Pour ceux qui ne souhaitent pas coder en Lisp pour personnaliser Emacs, des conf
 Avis personnel : cela peut incontestablement aider les débutants, car le Emacs "out of the box" ou "vanilla" (sans aucune personnalisation) peut sembler très rebutant. Ces starter kits permettent de débuter avec des paramétrages plus agréables que le paramétrage par défaut. Toutefois, il ne faut pas perdre de vue que *la* grande force d'Emacs est la capacité à être personnalisé sans limite, et à se plier à la moindre de vos préférences ou habitudes de travail. Ces starter kits ne le pourront pas : seul un paramétrage par vos soins fera d'Emacs un compagnon vraiment utile pour vous. "L'esprit Emacs" consiste plutôt à considérer ces starter kits comme des points de départ à retravailler, et pas comme des produits finis.
 
 ** Généralités sur Org mode
-Une seule ressource essentielle : la [[https://www.youtube.com/playlist?list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE][formidable chaîne Youtube de Rainer König]] sur Org mode.
+Deux ressources essentielles :
+- la [[https://www.youtube.com/playlist?list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE][formidable chaîne Youtube de Rainer König]] sur Org mode
+- [[https://www.youtube.com/watch?v=oJTwQvgfgMM][une présentation vidéo d'Org mode par son créateur]] (Carsten Dominik) 
 
 ** Fonctionnalités GTD avancées avec Org mode
 Quelques billets de blog pour les fonctionnalités d'agenda et de gestion des tâches avec Org mode :
