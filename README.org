@@ -1,0 +1,7 @@
+#+TITLE: [Meet up] Orgmode, un couteau suisse pour la recherche
+#+AUTHOR: Frédéric Santos
+
+L'Urfist Bordeaux propose en juillet 2020 [[https://sygefor.reseau-urfist.fr/#/training/8617/9807][un meetup en deux volets sur Orgmode]] et son application à la recherche reproductible. Ce dépôt contient divers fichiers à disposition des participants au meetup.
+
+Tous les fichiers sont sous licence [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]].
+
