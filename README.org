@@ -9,6 +9,7 @@ Tous les fichiers sont sous licence [[http://creativecommons.org/licenses/by-nc-
 Quelques ressources externes utiles après ce meetup.
 
 ** Généralités sur Emacs
+- [[https://www.gnu.org/software/emacs/][Le site officiel]], comprenant notamment toutes les infos sur l'installation d'Emacs (et beaucoup de documentation)
 - [[https://www.itpro.co.uk/development/programming/355406/how-to-learn-emacs][Un tutoriel rapide (et récent) qui couvre également Org mode]]
 - [[https://sachachua.com/blog/][L'incontournable site de Sacha Chua]] pour les actualités hebdomadaires sur Emacs
 
