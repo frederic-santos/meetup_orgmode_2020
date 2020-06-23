@@ -26,7 +26,9 @@
 - Est actuellement dans sa version 26.3
 
 ** Philosophie emacsienne
-Emacs se décrit comme /"extensible, customizable and self-documenting"/.
+Idée phare : rendre l'utilisateur totalement maître de son environnement de travail.
+
+À cette fin, Emacs se décrit comme /"extensible, customizable and self-documenting"/ :
 
 - *Extensible* : offre le langage Emacs Lisp comme langage d'extension. Il existe aujourd'hui plus de 4900 extensions Emacs sur le dépôt Melpa, offrant des fonctionnalités supplémentaires.
 - *Personnalisable* : très puissamment personnalisable via un /fichier d'initialisation/ où l'on peut redéfinir n'importe quel paramètre ou variable du logiciel, et ajouter de nouveaux comportements. Deux utilisateurs d'Emacs n'auront jamais le même Emacs.
@@ -73,14 +75,6 @@ Ici, un exemple de configuration d'Emacs en tant qu'EDI pour le langage R (avec 
 
 [[./images/exemple-ediff.png]]
 
-*** Modes d'édition divers
-Emacs facilite le travail avec les plateformes telles que GitLab/GitHub/GitUB, ainsi que DockerHub, grâce :
-- à un mode d'édition de fichiers de configuration GitLab.CI (intégration continue) ;
-- à un mode d'édition de ~Dockerfile~ ;
-- au support de la syntaxe Org sur GitLab ou GitHub pour les fichiers README.
-
-[[./images/exemple-gitlab.png]]
- 
 *** Gestionnaire de fichiers
 [[./images/exemple-dired.png]]
 
@@ -98,21 +92,10 @@ Emacs a un mode ~doctor~ intégré pour une psychothérapie en mode texte.
 [[./images/wow_owl.gif]]
 
 #+ATTR_REVEAL: :frag roll-in
-    Ben oui.
-
-*** Même faire mon café ?
-[[./images/emacs_mug.jpg]]
-[[./images/emacs_mug_autofill.jpg]]
+Ben oui.
 
 #+ATTR_REVEAL: :frag roll-in
-(Oui, ~auto-fill-mode~ est réellement une commande Emacs.)
-
-*** Même écrire des articles pour moi ?
-[[./images/academic-phrases.gif]]
-
-#+ATTR_REVEAL: :frag roll-in
-Ce n'est pas totalement du troll : le package ~academic-phrases~ implémente simplement dans Emacs les conseils d'Adrian Wallwork (/English for Writing Research Papers/, Springer, 2016).
-
+(Un utilisateur avancé d'Emacs aura tendance à "vivre dans Emacs" et à réaliser la quasi-totalité de ses tâches informatiques directement dans ce logiciel.)
 * Org mode
 
 [[./images/org-mode.jpg]]
