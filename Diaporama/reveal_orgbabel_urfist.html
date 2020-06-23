@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Une introduction à Emacs et Org-mode</title>
+<title>Une introduction à Emacs et Org mode</title>
 <meta name="author" content="(Frédéric Santos)"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
@@ -22,18 +22,18 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
-<meta name="description" content="Emacs et Org-mode pour la recherche reproductible.">
+<meta name="description" content="Emacs et Org mode pour la recherche reproductible.">
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Une introduction à Emacs et Org-mode</h1><p class="subtitle">(et leur application à la recherche reproductible)</p>
+<section id="sec-title-slide"><h1 class="title">Une introduction à Emacs et Org mode</h1><p class="subtitle">(et leur application à la recherche reproductible)</p>
 <h2 class="author">Frédéric Santos</h2><h2 class="email"><a href="mailto:frederic.santos@u-bordeaux.fr">frederic.santos@u-bordeaux.fr</a></h2><h2 class="date">Mardi 7 juillet 2020</h2>
 </section>
 
 <section>
-<section id="slide-orgd35d1aa">
-<h2 id="orgd35d1aa"><span class="section-number-2">1</span> Emacs</h2>
+<section id="slide-org22487de">
+<h2 id="org22487de"><span class="section-number-2">1</span> Emacs</h2>
 
 <div class="figure">
 <p><img src="./images/splash.png" alt="splash.png" />
@@ -43,27 +43,39 @@
 </section>
 </section>
 <section>
-<section id="slide-org943e329">
-<h3 id="org943e329"><span class="section-number-3">1.1</span> Historique</h3>
+<section id="slide-org7a676d9">
+<h3 id="org7a676d9"><span class="section-number-3">1.1</span> Pourquoi travailler en texte brut ?</h3>
 <ul>
-<li>Développé dans les années 1980 par Richard Stallman, afin de fournir un équivalent libre au logiciel propriétaire Gosling Emacs</li>
-<li>Codé en langage C et en Emacs Lisp</li>
-<li>Est actuellement dans sa version 26.3</li>
-<li>A fait l&rsquo;objet de plusieurs forks : Emacs est désormais une <i>famille</i> d&rsquo;éditeurs de texte (le plus populaire étant GNU Emacs)</li>
+<li>Portable</li>
+<li>Durable</li>
+<li>Aisé à versionner (git, svn)</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-orga43cae6">
-<h3 id="orga43cae6"><span class="section-number-3">1.2</span> Philosophie</h3>
+<section id="slide-org34a7031">
+<h3 id="org34a7031"><span class="section-number-3">1.2</span> Historique</h3>
+<ul>
+<li>Développé dans les années 1980 par Richard Stallman à partir du logiciel propriétaire Gosling Emacs</li>
+<li>Logiciel libre, disponible pour tous les OS</li>
+<li>Codé en langages C et Emacs Lisp</li>
+<li>Est actuellement dans sa version 26.3</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org9e173de">
+<h3 id="org9e173de"><span class="section-number-3">1.3</span> Philosophie emacsienne</h3>
 <p>
 Emacs se décrit comme <i>&ldquo;extensible, customizable and self-documenting&rdquo;</i>.
 </p>
 
 <ul>
-<li><b>Extensible</b> : offre le langage Emacs Lisp comme langage d&rsquo;extension. Il existe aujourd&rsquo;hui plus de 4600 extensions Emacs sur le dépôt Melpa, offrant des fonctionnalités supplémentaires.</li>
+<li><b>Extensible</b> : offre le langage Emacs Lisp comme langage d&rsquo;extension. Il existe aujourd&rsquo;hui plus de 4900 extensions Emacs sur le dépôt Melpa, offrant des fonctionnalités supplémentaires.</li>
 <li><b>Personnalisable</b> : très puissamment personnalisable via un <i>fichier d&rsquo;initialisation</i> où l&rsquo;on peut redéfinir n&rsquo;importe quel paramètre ou variable du logiciel, et ajouter de nouveaux comportements. Deux utilisateurs d&rsquo;Emacs n&rsquo;auront jamais le même Emacs.</li>
 <li><b>Documenté</b> : tutoriel, nombreux manuels très touffus, communauté d&rsquo;utilisateurs sur Stackoverflow, aide intégrée dans le logiciel.</li>
 
@@ -72,8 +84,8 @@ Emacs se décrit comme <i>&ldquo;extensible, customizable and self-documenting&r
 </section>
 </section>
 <section>
-<section id="slide-orgae54224">
-<h3 id="orgae54224"><span class="section-number-3">1.3</span> Aperçu des fonctionnalités</h3>
+<section id="slide-org9b3aaf3">
+<h3 id="org9b3aaf3"><span class="section-number-3">1.4</span> Aperçu des fonctionnalités</h3>
 
 <div class="figure">
 <p><img src="./images/avalanche.gif" alt="avalanche.gif" />
@@ -81,8 +93,8 @@ Emacs se décrit comme <i>&ldquo;extensible, customizable and self-documenting&r
 </div>
 
 </section>
-<section id="slide-org9323f14">
-<h4 id="org9323f14"><span class="section-number-4">1.3.1</span> Éditeur de texte brut</h4>
+<section id="slide-orgf873339">
+<h4 id="orgf873339"><span class="section-number-4">1.4.1</span> Éditeur de texte brut</h4>
 
 <div class="figure">
 <p><img src="./images/texte-brut.png" alt="texte-brut.png" />
@@ -94,8 +106,8 @@ Emacs se décrit comme <i>&ldquo;extensible, customizable and self-documenting&r
 </p>
 
 </section>
-<section id="slide-org480dedc">
-<h4 id="org480dedc"><span class="section-number-4">1.3.2</span> Éditeur LaTeX</h4>
+<section id="slide-org4293217">
+<h4 id="org4293217"><span class="section-number-4">1.4.2</span> Éditeur LaTeX</h4>
 <p>
 AUCTeX : un mode LaTeX très performant (avec prévisualisation WYSIWYG).
 </p>
@@ -107,8 +119,8 @@ AUCTeX : un mode LaTeX très performant (avec prévisualisation WYSIWYG).
 </div>
 
 </section>
-<section id="slide-org85ee03d">
-<h4 id="org85ee03d"><span class="section-number-4">1.3.3</span> Éditeur de langages de balisage</h4>
+<section id="slide-org87bde1e">
+<h4 id="org87bde1e"><span class="section-number-4">1.4.3</span> Éditeur de langages de balisage</h4>
 <ul>
 <li>Des modes HTML et CSS</li>
 <li>Un mode markdown</li>
@@ -122,8 +134,8 @@ AUCTeX : un mode LaTeX très performant (avec prévisualisation WYSIWYG).
 </div>
 
 </section>
-<section id="slide-org2405b54">
-<h4 id="org2405b54"><span class="section-number-4">1.3.4</span> Visionneuse d&rsquo;images</h4>
+<section id="slide-org7a3825a">
+<h4 id="org7a3825a"><span class="section-number-4">1.4.4</span> Visionneuse d&rsquo;images</h4>
 
 <div class="figure">
 <p><img src="./images/exemple-image.png" alt="exemple-image.png" />
@@ -131,8 +143,8 @@ AUCTeX : un mode LaTeX très performant (avec prévisualisation WYSIWYG).
 </div>
 
 </section>
-<section id="slide-org392a011">
-<h4 id="org392a011"><span class="section-number-4">1.3.5</span> Visionneuse PDF</h4>
+<section id="slide-orge433814">
+<h4 id="orge433814"><span class="section-number-4">1.4.5</span> Visionneuse PDF</h4>
 
 <div class="figure">
 <p><img src="./images/exemple-pdf.png" alt="exemple-pdf.png" />
@@ -140,8 +152,8 @@ AUCTeX : un mode LaTeX très performant (avec prévisualisation WYSIWYG).
 </div>
 
 </section>
-<section id="slide-org1746e08">
-<h4 id="org1746e08"><span class="section-number-4">1.3.6</span> Éditeur de script</h4>
+<section id="slide-org4311c89">
+<h4 id="org4311c89"><span class="section-number-4">1.4.6</span> Éditeur de script</h4>
 <p>
 Ici, un exemple de script bash :
 </p>
@@ -153,16 +165,16 @@ Ici, un exemple de script bash :
 </div>
 
 </section>
-<section id="slide-org4216fd9">
-<h4 id="org4216fd9"><span class="section-number-4">1.3.7</span> Emacs en tant qu&rsquo;EDI</h4>
+<section id="slide-orgdf33128">
+<h4 id="orgdf33128"><span class="section-number-4">1.4.7</span> Emacs en tant qu&rsquo;EDI</h4>
 <p>
 Ici, un exemple de configuration d&rsquo;Emacs en tant qu&rsquo;EDI pour le langage R (avec une fenêtre de script, une fenêtre de résultats, une fenêtre d&rsquo;aide et un explorateur de variables R) :
 <img src="./images/exemple-ide-R.png" alt="exemple-ide-R.png" />
 </p>
 
 </section>
-<section id="slide-org2b01a3c">
-<h4 id="org2b01a3c"><span class="section-number-4">1.3.8</span> Versionnement</h4>
+<section id="slide-org10e3df2">
+<h4 id="org10e3df2"><span class="section-number-4">1.4.8</span> Versionnement</h4>
 <ul>
 <li>Offre un mode de versionnement natif (prise en charge de Git ou SVN)</li>
 <li>Un package additionnel, Magit, offre le meilleur client Git actuel, tous logiciels confondus</li>
@@ -177,8 +189,8 @@ Ici, un exemple de configuration d&rsquo;Emacs en tant qu&rsquo;EDI pour le lang
 </div>
 
 </section>
-<section id="slide-orgd463189">
-<h4 id="orgd463189"><span class="section-number-4">1.3.9</span> Modes d&rsquo;édition divers</h4>
+<section id="slide-org9b2e7cc">
+<h4 id="org9b2e7cc"><span class="section-number-4">1.4.9</span> Modes d&rsquo;édition divers</h4>
 <p>
 Emacs facilite le travail avec les plateformes telles que GitLab/GitHub/GitUB, ainsi que DockerHub, grâce :
 </p>
@@ -196,8 +208,8 @@ Emacs facilite le travail avec les plateformes telles que GitLab/GitHub/GitUB, a
 </div>
 
 </section>
-<section id="slide-orgc19e2ca">
-<h4 id="orgc19e2ca"><span class="section-number-4">1.3.10</span> Gestionnaire de fichiers</h4>
+<section id="slide-org5f7c6fe">
+<h4 id="org5f7c6fe"><span class="section-number-4">1.4.10</span> Gestionnaire de fichiers</h4>
 
 <div class="figure">
 <p><img src="./images/exemple-dired.png" alt="exemple-dired.png" />
@@ -205,8 +217,8 @@ Emacs facilite le travail avec les plateformes telles que GitLab/GitHub/GitUB, a
 </div>
 
 </section>
-<section id="slide-org682e342">
-<h4 id="org682e342"><span class="section-number-4">1.3.11</span> Client mail et fonctionnalités web</h4>
+<section id="slide-org5d6f718">
+<h4 id="org5d6f718"><span class="section-number-4">1.4.11</span> Client mail et fonctionnalités web</h4>
 
 <div class="figure">
 <p><img src="./images/exemple-mu4e.png" alt="exemple-mu4e.png" />
@@ -218,8 +230,8 @@ Emacs inclut aussi un navigateur web basique (en mode texte), un client IRC et u
 </p>
 
 </section>
-<section id="slide-orgff7f537">
-<h4 id="orgff7f537"><span class="section-number-4">1.3.12</span> Psychothérapeute</h4>
+<section id="slide-org1437354">
+<h4 id="org1437354"><span class="section-number-4">1.4.12</span> Psychothérapeute</h4>
 <p>
 Emacs a un mode <code>doctor</code> intégré pour une psychothérapie en mode texte.
 </p>
@@ -233,8 +245,8 @@ Emacs a un mode <code>doctor</code> intégré pour une psychothérapie en mode t
 </section>
 </section>
 <section>
-<section id="slide-org8e3a6bf">
-<h3 id="org8e3a6bf"><span class="section-number-3">1.4</span> Mais alors, Emacs peut tout faire ?</h3>
+<section id="slide-org2e8e1a9">
+<h3 id="org2e8e1a9"><span class="section-number-3">1.5</span> Mais alors, Emacs peut tout faire ?</h3>
 
 <div class="figure">
 <p><img src="./images/wow_owl.gif" alt="wow_owl.gif" />
@@ -246,8 +258,8 @@ Ben oui.
 </p>
 
 </section>
-<section id="slide-org7cad809">
-<h4 id="org7cad809"><span class="section-number-4">1.4.1</span> Même faire mon café ?</h4>
+<section id="slide-org10840f1">
+<h4 id="org10840f1"><span class="section-number-4">1.5.1</span> Même faire mon café ?</h4>
 <p>
 <img src="./images/emacs_mug.jpg" alt="emacs_mug.jpg" />
 <img src="./images/emacs_mug_autofill.jpg" alt="emacs_mug_autofill.jpg" />
@@ -258,8 +270,8 @@ Ben oui.
 </p>
 
 </section>
-<section id="slide-org8ef5431">
-<h4 id="org8ef5431"><span class="section-number-4">1.4.2</span> Même écrire des articles pour moi ?</h4>
+<section id="slide-orga7adf3f">
+<h4 id="orga7adf3f"><span class="section-number-4">1.5.2</span> Même écrire des articles pour moi ?</h4>
 
 <div class="figure">
 <p><img src="./images/academic-phrases.gif" alt="academic-phrases.gif" />
@@ -273,15 +285,8 @@ Ce n&rsquo;est pas totalement du troll : le package <code>academic-phrases</code
 </section>
 </section>
 <section>
-<section id="slide-org0d2494b">
-<h2 id="org0d2494b"><span class="section-number-2">2</span> Org-mode</h2>
-<ul>
-<li>Un mode majeur d&rsquo;édition Emacs pour <i>&ldquo;organiser sa vie en texte brut&rdquo;</i>.</li>
-<li>Clairement l&rsquo;une des fonctionnalités phares d&rsquo;Emacs.</li>
-<li>Dispose de fonctionnalités avancées d&rsquo;export vers de nombreux formats (html, odt, pdf/tex, pdf/beamer, reveal.js, &#x2026;) grâce à son moteur <i>natif</i> d&rsquo;export (pas besoin de <code>pandoc</code>).</li>
-
-</ul>
-
+<section id="slide-org928713a">
+<h2 id="org928713a"><span class="section-number-2">2</span> Org mode</h2>
 
 <div class="figure">
 <p><img src="./images/org-mode.jpg" alt="org-mode.jpg" />
@@ -291,13 +296,13 @@ Ce n&rsquo;est pas totalement du troll : le package <code>academic-phrases</code
 </section>
 </section>
 <section>
-<section id="slide-orga2b27d2">
-<h2 id="orga2b27d2"><span class="section-number-2">3</span> Org-babel</h2>
+<section id="slide-orgf8ea25e">
+<h3 id="orgf8ea25e"><span class="section-number-3">2.1</span> Un mode d&rsquo;Emacs pour &ldquo;organiser sa vie en texte brut&rdquo;</h3>
 <ul>
-<li>Babel est la fonctionnalité d&rsquo;Org-mode qui permet de gérer du code source dans un fichier <code>.org</code>.</li>
-<li>Gère plus de 50 langages (C/C++, Matlab, Octave, Perl, Python, R, shell, &#x2026;).</li>
-<li>Permet de passer des variables aisément d&rsquo;un langage à l&rsquo;autre.</li>
-<li>Permet de combiner une interface de type <i>notebook</i> avec toutes les fonctions <i>GTD</i> proposées par Org-mode.</li>
+<li>Clairement l&rsquo;une des fonctionnalités phares d&rsquo;Emacs.</li>
+<li>Créé par Carsten Dominik en 2003, initialement comme un système avancé de prise de notes et de classement de l&rsquo;information.</li>
+<li>Org mode a ensuite été considérablement étendu pour inclure un agenda, un gestionnaire de tâches, un système de suivi des habitudes, un chronométrage des tâches, etc.</li>
+<li>C&rsquo;est aujourd&rsquo;hui un système compatible <i>GTD</i>.</li>
 
 </ul>
 
@@ -306,6 +311,43 @@ Ce n&rsquo;est pas totalement du troll : le package <code>academic-phrases</code
 <p><img src="./images/gtd.png" alt="gtd.png" class="fragment roll-in" />
 </p>
 </div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfdaefcf">
+<h3 id="orgfdaefcf"><span class="section-number-3">2.2</span> Un moteur d&rsquo;export universel</h3>
+<ul>
+<li>Org mode est aussi un langage de balisage léger, similaire à (mais plus avancé que) Markdown.</li>
+<li>Dispose de fonctionnalités avancées d&rsquo;export vers de nombreux formats (html, odt, pdf/tex, pdf/beamer, reveal.js, &#x2026;) grâce à son moteur <i>natif</i> d&rsquo;export (pas besoin de <code>pandoc</code>).</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1df4193">
+<h2 id="org1df4193"><span class="section-number-2">3</span> Org-babel</h2>
+<ul>
+<li>Étend Org mode en système de programmation lettrée.</li>
+<li>Gère plus de 50 langages (Bash, C/C++, Matlab, Octave, Perl, Python, R, &#x2026;).</li>
+<li>Permet de passer des variables aisément d&rsquo;un langage à l&rsquo;autre.</li>
+<li>Permet de combiner une interface de type <i>notebook</i> avec toutes les fonctions <i>GTD</i> proposées par Org-mode.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga105891">
+<h2 id="orga105891"><span class="section-number-2">4</span> Programme du meetup (session 1)</h2>
+<ul>
+<li>On ne parlera pas du tout de programmation (cf. session 2 !).</li>
+<li>Approche principale adoptée dans ce meetup : présenter Org mode comme langage de balisage léger, et système d&rsquo;export universel.</li>
+<li>Approche secondaire : Org mode comme système GTD.</li>
+<li>Le meetup sera suivi d&rsquo;une session de questions / réponses.</li>
+
+</ul>
 </section>
 </section>
 </div>
@@ -313,10 +355,12 @@ Ce n&rsquo;est pas totalement du troll : le package <code>academic-phrases</code
 <p> Créé par Frédéric Santos </p>
 <script src="/home/fsantos/PACEA_MyCore/Logiciels/reveal_js/js/reveal.js"></script>
 
+
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
+,
 width:1800, height:1080, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'fade', slideNumber:'c/t',
 multiplex: {
     secret: '', // null if client

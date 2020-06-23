@@ -1,4 +1,4 @@
-#+TITLE: Une introduction à Emacs et Org-mode
+#+TITLE: Une introduction à Emacs et Org mode
 #+SUBTITLE: et leur application à la recherche reproductible
 #+AUTHOR: Frédéric Santos
 #+EMAIL: frederic.santos@u-bordeaux.fr
@@ -7,23 +7,28 @@
 #+OPTIONS: toc:nil email:t timestamp:nil reveal_global_header:t
 #+REVEAL_THEME: sky
 #+REVEAL_HLEVEL: 2
-#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Emacs et Org-mode pour la recherche reproductible.">
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Emacs et Org mode pour la recherche reproductible.">
 #+REVEAL_POSTAMBLE: <p> Créé par Frédéric Santos </p>
 
 * Emacs
 
 [[./images/splash.png]]
 
-** Historique
-- Développé dans les années 1980 par Richard Stallman, afin de fournir un équivalent libre au logiciel propriétaire Gosling Emacs
-- Codé en langage C et en Emacs Lisp
-- Est actuellement dans sa version 26.3
-- A fait l'objet de plusieurs forks : Emacs est désormais une /famille/ d'éditeurs de texte (le plus populaire étant GNU Emacs)
+** Pourquoi travailler en texte brut ?
+- Portable
+- Durable
+- Aisé à versionner (git, svn)
 
-** Philosophie
+** Historique
+- Développé dans les années 1980 par Richard Stallman à partir du logiciel propriétaire Gosling Emacs
+- Logiciel libre, disponible pour tous les OS
+- Codé en langages C et Emacs Lisp
+- Est actuellement dans sa version 26.3
+
+** Philosophie emacsienne
 Emacs se décrit comme /"extensible, customizable and self-documenting"/.
 
-- *Extensible* : offre le langage Emacs Lisp comme langage d'extension. Il existe aujourd'hui plus de 4600 extensions Emacs sur le dépôt Melpa, offrant des fonctionnalités supplémentaires.
+- *Extensible* : offre le langage Emacs Lisp comme langage d'extension. Il existe aujourd'hui plus de 4900 extensions Emacs sur le dépôt Melpa, offrant des fonctionnalités supplémentaires.
 - *Personnalisable* : très puissamment personnalisable via un /fichier d'initialisation/ où l'on peut redéfinir n'importe quel paramètre ou variable du logiciel, et ajouter de nouveaux comportements. Deux utilisateurs d'Emacs n'auront jamais le même Emacs.
 - *Documenté* : tutoriel, nombreux manuels très touffus, communauté d'utilisateurs sur Stackoverflow, aide intégrée dans le logiciel.
 
@@ -108,18 +113,31 @@ Emacs a un mode ~doctor~ intégré pour une psychothérapie en mode texte.
 #+ATTR_REVEAL: :frag roll-in
 Ce n'est pas totalement du troll : le package ~academic-phrases~ implémente simplement dans Emacs les conseils d'Adrian Wallwork (/English for Writing Research Papers/, Springer, 2016).
 
-* Org-mode
-- Un mode majeur d'édition Emacs pour /"organiser sa vie en texte brut"/.
-- Clairement l'une des fonctionnalités phares d'Emacs.
-- Dispose de fonctionnalités avancées d'export vers de nombreux formats (html, odt, pdf/tex, pdf/beamer, reveal.js, ...) grâce à son moteur /natif/ d'export (pas besoin de ~pandoc~).
+* Org mode
 
 [[./images/org-mode.jpg]]
 
-* Org-babel
-- Babel est la fonctionnalité d'Org-mode qui permet de gérer du code source dans un fichier ~.org~.
-- Gère plus de 50 langages (C/C++, Matlab, Octave, Perl, Python, R, shell, ...).
-- Permet de passer des variables aisément d'un langage à l'autre.
-- Permet de combiner une interface de type /notebook/ avec toutes les fonctions /GTD/ proposées par Org-mode.
+** Un mode d'Emacs pour "organiser sa vie en texte brut"
+- Clairement l'une des fonctionnalités phares d'Emacs.
+- Créé par Carsten Dominik en 2003, initialement comme un système avancé de prise de notes et de classement de l'information.
+- Org mode a ensuite été considérablement étendu pour inclure un agenda, un gestionnaire de tâches, un système de suivi des habitudes, un chronométrage des tâches, etc.
+- C'est aujourd'hui un système compatible /GTD/.
 
 #+ATTR_REVEAL: :frag roll-in
 [[./images/gtd.png]]
+
+** Un moteur d'export universel
+- Org mode est aussi un langage de balisage léger, similaire à (mais plus avancé que) Markdown.
+- Dispose de fonctionnalités avancées d'export vers de nombreux formats (html, odt, pdf/tex, pdf/beamer, reveal.js, ...) grâce à son moteur /natif/ d'export (pas besoin de ~pandoc~).
+
+* Org-babel
+- Étend Org mode en système de programmation lettrée.
+- Gère plus de 50 langages (Bash, C/C++, Matlab, Octave, Perl, Python, R, ...).
+- Permet de passer des variables aisément d'un langage à l'autre.
+- Permet de combiner une interface de type /notebook/ avec toutes les fonctions /GTD/ proposées par Org-mode.
+
+* Programme du meetup (session 1)
+- On ne parlera pas du tout de programmation (cf. session 2 !).
+- Approche principale adoptée dans ce meetup : présenter Org mode comme langage de balisage léger, et système d'export universel.
+- Approche secondaire : Org mode comme système GTD.
+- Le meetup sera suivi d'une session de questions / réponses.
