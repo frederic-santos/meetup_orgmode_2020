@@ -3,13 +3,48 @@
 #+AUTHOR: Frédéric Santos
 #+EMAIL: frederic.santos@u-bordeaux.fr
 #+DATE: Mardi 7 juillet 2020
-#+REVEAL_INIT_OPTIONS: width:1800, height:1080, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'fade', slideNumber:'c/t'
+#+REVEAL_INIT_OPTIONS: width:1650, height:950, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'fade', slideNumber:'c/t'
 #+OPTIONS: toc:nil email:t timestamp:nil reveal_global_header:t
 #+REVEAL_THEME: sky
 #+REVEAL_HLEVEL: 2
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Emacs et Org mode pour la recherche reproductible.">
 #+REVEAL_POSTAMBLE: <p> Créé par Frédéric Santos </p>
 
+* Participants au meetup
+  :PROPERTIES:
+  :UNNUMBERED: t
+  :END:
+Une vingtaine d'inscrits, et 14 répondants au questionnaire pré-meetup.
+
+** Beaucoup de vrais novices
+- Environ 70 % des répondants n'ont jamais utilisé Org mode
+- Environ un quart des répondants n'a aucune connaissance sur Emacs
+
+** Pratiques de rédaction
+- Beaucoup d'utilisateurs d'autres langages de balisage : près des trois quarts des répondants utilisent LaTeX et/ou Markdown
+- Une large majorité d'utilisateurs de Zotero ou JabRef
+- Seuls 2 répondants sur 14 trouvent "aisé" de suivre les normes formelles des éditeurs scientifiques
+
+** Programmation
+- Environ un quart des répondants fait déjà de la programmation lettrée avec Jupyter ou Rmarkdown
+
+* Organisation du meetup (session 1)
+  :PROPERTIES:
+  :UNNUMBERED: t
+  :END:
+** Programme
+- (Re)découverte d'Emacs
+- Généralités sur Org mode
+- Démo : rédiger un document Org et l'exporter en de multiples formats
+- Démo : un exemple simple d'utilisation d'Org mode comme "planificateur du quotidien"
+
+** Approche
+- Approche principale : Org mode comme langage de balisage léger, et système d'export universel
+- Approche secondaire : Org mode comme système GTD
+
+** Interactivité
+- Le meetup sera suivi d'une session de questions / réponses
+- Les questions peuvent être posées dans le chat à tout moment
 * Emacs
 
 [[./images/splash.png]]
@@ -65,12 +100,12 @@ Ici, un exemple de script bash :
 [[./images/exemple-script.png]]
 
 *** Emacs en tant qu'EDI
-Ici, un exemple de configuration d'Emacs en tant qu'EDI pour le langage R (avec une fenêtre de script, une fenêtre de résultats, une fenêtre d'aide et un explorateur de variables R) :
+Un exemple de configuration d'Emacs en tant qu'EDI pour le langage R :
 [[./images/exemple-ide-R.png]]
 
 *** Versionnement
 - Offre un mode de versionnement natif (prise en charge de Git ou SVN)
-- Un package additionnel, Magit, offre le meilleur client Git actuel, tous logiciels confondus
+- Un package additionnel, Magit, offre le meilleur client Git actuel
 - Comparaison aisée des versions avec ~ediff~
 
 [[./images/exemple-ediff.png]]
@@ -81,7 +116,7 @@ Ici, un exemple de configuration d'Emacs en tant qu'EDI pour le langage R (avec 
 *** Client mail et fonctionnalités web
 [[./images/exemple-mu4e.png]]
 
-Emacs inclut aussi un navigateur web basique (en mode texte), un client IRC et un lecteur de flux RSS.
+Emacs inclut aussi un navigateur web basique (en mode texte), un client IRC, ...
 
 *** Psychothérapeute
 Emacs a un mode ~doctor~ intégré pour une psychothérapie en mode texte.
@@ -103,7 +138,7 @@ Ben oui.
 ** Un mode d'Emacs pour "organiser sa vie en texte brut"
 - Clairement l'une des fonctionnalités phares d'Emacs.
 - Créé par Carsten Dominik en 2003, initialement comme un système avancé de prise de notes et de classement de l'information.
-- Org mode a ensuite été considérablement étendu pour inclure un agenda, un gestionnaire de tâches, un système de suivi des habitudes, un chronométrage des tâches, etc.
+- Org mode a ensuite été considérablement étendu pour inclure un agenda, un gestionnaire de tâches, un chronométrage des tâches, ...
 - C'est aujourd'hui un système compatible /GTD/.
 
 #+ATTR_REVEAL: :frag roll-in
@@ -119,8 +154,3 @@ Ben oui.
 - Permet de passer des variables aisément d'un langage à l'autre.
 - Permet de combiner une interface de type /notebook/ avec toutes les fonctions /GTD/ proposées par Org-mode.
 
-* Programme du meetup (session 1)
-- On ne parlera pas du tout de programmation (cf. session 2 !).
-- Approche principale adoptée dans ce meetup : présenter Org mode comme langage de balisage léger, et système d'export universel.
-- Approche secondaire : Org mode comme système GTD.
-- Le meetup sera suivi d'une session de questions / réponses.
