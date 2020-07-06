@@ -14,19 +14,19 @@
   :PROPERTIES:
   :UNNUMBERED: t
   :END:
-Une vingtaine d'inscrits, et 14 répondants au questionnaire pré-meetup.
+Une vingtaine d'inscrits, et 15 répondants au questionnaire pré-meetup.
 
 ** Beaucoup de vrais novices
-- Environ 70 % des répondants n'ont jamais utilisé Org mode
-- Environ un quart des répondants n'a aucune connaissance sur Emacs
+- Deux tiers des répondants n'ont jamais utilisé Org mode
+- Un tiers des répondants n'a jamais utilisé Emacs
 
 ** Pratiques de rédaction
 - Beaucoup d'utilisateurs d'autres langages de balisage : près des trois quarts des répondants utilisent LaTeX et/ou Markdown
 - Une large majorité d'utilisateurs de Zotero ou JabRef
-- Seuls 2 répondants sur 14 trouvent "aisé" de suivre les normes formelles des éditeurs scientifiques
+- Seuls 2 répondants sur 15 trouvent "aisé" de suivre les normes formelles des éditeurs scientifiques
 
 ** Programmation
-- Environ un quart des répondants fait déjà de la programmation lettrée avec Jupyter ou Rmarkdown
+- Environ un quart des répondants fait déjà de la programmation lettrée avec Jupyter ou Rmarkdown pour écrire des articles scientifiques
 
 * Organisation du meetup (session 1)
   :PROPERTIES:
