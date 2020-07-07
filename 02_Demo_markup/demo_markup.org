@@ -1,4 +1,71 @@
-#+TITLE:
-#+AUTHOR:
+#+TITLE: pacmanUB : un pacman made in Bordeaux
+#+AUTHOR: Frédéric Santos
 #+SETUPFILE: ~/PACEA_MyCore/Logiciels/Emacs/org-html-themes/setup/theme-readtheorg.setup
-#+LANGUAGE:
+#+LANGUAGE: fr
+#+LATEX_HEADER: \usepackage{mathpazo}
+
+* Présentation du logiciel
+  DEADLINE: <2020-07-10 ven.>
+Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+
+*Bold*
+/italic/
+_underline_
+~verbatim~
+
+** TODO Les développeurs
+   :LOGBOOK:
+   - Note taken on [2020-07-07 mar. 15:26] \\
+     Alizé m'a envoyé sa photo ici : [[mu4e:msgid:442108e5-3f6a-f6cc-d785-43e963b246a1@gmail.com][Re: American Journal of Physical Anthropology - AJPA-2018-00350.R1]]
+   - Note taken on [2020-07-07 mar. 15:24] \\
+     J'ai oublié la photo d'Alizé
+   :END:
+label:sec-dev
+Nullam tempus.  
+
+* Installation
+** Linux
+Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
+
+** TODO Mac OS
+Pellentesque dapibus suscipit ligula.
+
+** Windows
+*** Windows 7
+- Télécharger
+- Décompresser
+- Installer
+
+*** Windows 10
+1. Télécharger
+2. Décompresser
+3. Installer
+
+* Comparaison avec d'autres logiciels
+Voici la concurrence :
+
+#+CAPTION: Les différents Pacman sur le marché. label:tab-concur
+|---------------------+-------------+------|
+| Logiciels           | OS          | Prix |
+|---------------------+-------------+------|
+| pacmanUB            | Tous les OS |   19 |
+| pacTux              | Linux       |    0 |
+| iPac                | Mac OS      |   99 |
+| pacWin              | Windows     |   29 |
+|---------------------+-------------+------|
+| Collection complète |             |  147 |
+|---------------------+-------------+------|
+
+* L'avis de la presse
+Notre jeu a été testé sur le site web [[https://www.canardpc.com][Canard PC]].
+
+Si vous avez connaissance d'autres tests, vous pouvez nous écrire à l'adresse qui figure en section ref:sec-dev.
+
+* Captures d'écran
+Voici des images du jeu en figure ref:fig-capture.
+
+#+CAPTION: pacmanUB en action ! label:fig-capture
+[[./pacman.jpg]]
+
+* Algorithme
+Les déplacements des fantômes obéissent à une formule très compliquée : $\cos(\xi + \pi/6) = \theta$.
