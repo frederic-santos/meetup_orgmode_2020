@@ -5,6 +5,14 @@ L'Urfist Bordeaux propose en juillet 2020 [[https://sygefor.reseau-urfist.fr/#/t
 
 Tous les fichiers sont sous licence [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]].
 
+* Cloner ce répertoire
+Pour cloner ce dépôt sur votre ordinateur :
+#+begin_src shell
+git config --global http.sslVerify false
+git clone https://gitub.u-bordeaux.fr/fsantos/meetup_orgmode_2020.git
+git config --global http.sslVerify true
+#+end_src
+
 * Pour aller plus loin
 Quelques ressources externes utiles après ce meetup.
 
