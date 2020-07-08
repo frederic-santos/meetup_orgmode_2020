@@ -1,5 +1,6 @@
 #+TITLE: Interaction R/Python en Org mode
 #+AUTHOR: Frédéric Santos
+#+STARTUP: content
 
 On présente ici des exemples simples de programmation lettrée Org mode, dans lesquels on fait passer aisément des variables de R vers Python (ou vice versa).
 Il est à noter que la procédure exposée ici fonctionne pour n'importe quelle autre paire de langages de programmation supportés par Org mode.
@@ -15,6 +16,7 @@ Cela fonctionne pour toutes les variables de types "basiques" (valeurs numériqu
 ** Exemple
 #+NAME: Rvar
 #+begin_src R :results output :session *R* :exports both
+## Définir une variable en R :
 x <- 2
 x
 #+end_src
@@ -23,6 +25,7 @@ x
 : [1] 2
 
 #+begin_src python :results output :session :exports both :var x=Rvar
+## Elle est désormais reconnue en Python :
 print(x)
 #+end_src
 
