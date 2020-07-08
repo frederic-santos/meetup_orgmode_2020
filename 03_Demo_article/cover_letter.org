@@ -1,0 +1,25 @@
+#+OPTIONS: toc:nil author:nil date:nil
+#+LATEX_HEADER: \usepackage[english]{babel}
+#+LATEX_HEADER: \usepackage{mathpazo}
+#+LATEX_HEADER: \usepackage{a4wide}
+#+LATEX_HEADER: \usepackage[natbibapa]{apacite}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LANGUAGE: en
+
+Dear Dr. Marcos Martinón-Torres and Dr. Robin Torrence,
+
+Dear Editorial Board of the /Journal of Archaeological Science/,
+
+\bigskip
+
+Please find herewith my manuscript entitled ``DSP2 method is so damn' cool!'', which I am submitting for publication in your journal as a Joke article. 
+
+Some recent research articles have proposed methodological advances for sex estimation using the human os coxae (*insérer refs ici*), but as you will see, my article is much better.
+
+\bigskip
+
+I look forward to hearing from you. 
+
+Yours sincerely,
+ 
+Frédéric Santos

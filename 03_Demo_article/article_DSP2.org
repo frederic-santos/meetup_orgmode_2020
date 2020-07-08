@@ -1,0 +1,18 @@
+#+LATEX_HEADER: \usepackage{minted} % pour de jolis blocs de code
+#+LATEX_HEADER: \usepackage[natbibapa]{apacite} % /!\ provisoire !
+#+OPTIONS: toc:nil 
+
+* Arrière-boutique                                                 :noexport:
+On donne ici des info "privées", qui ne figureront pas sur l'export final, mais qui sont importantes pour le projet.
+
+** Trouver des reviewers
+- Mme Bidule
+- M. Truc
+
+** Rédiger la cover-letter
+[[./cover_letter.org]]
+
+** Check-list avant soumission
+
+bibliography:~/PACEA_MyCore/complete_biblio.bib
+bibliographystyle:apacite

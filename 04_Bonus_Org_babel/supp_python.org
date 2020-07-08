@@ -1,0 +1,116 @@
+#+TITLE: Interaction R/Python en Org mode
+#+AUTHOR: Frédéric Santos
+
+On présente ici des exemples simples de programmation lettrée Org mode, dans lesquels on fait passer aisément des variables de R vers Python (ou vice versa).
+Il est à noter que la procédure exposée ici fonctionne pour n'importe quelle autre paire de langages de programmation supportés par Org mode.
+
+* Un exemple simple (simpliste ?)
+** Démarche
+Voici la procédure pour déclarer une variable en R, puis la passer en Python :
+- nommer le bloc de code produisant le résultat R que l'on souhaite transférer en Python (on le nomme avec la balise ~#+NAME~) ;
+- pour passer cette variable en Python, on ajoute simplement le nom ainsi choisi en argument ~:var~ dans le header du bloc de code Python.
+
+Cela fonctionne pour toutes les variables de types "basiques" (valeurs numériques, listes, ...). De plus, *on ne fait appel à aucun package tiers* pour réaliser cela : Org mode "se charge de tout" !
+
+** Exemple
+#+NAME: Rvar
+#+begin_src R :results output :session *R* :exports both
+x <- 2
+x
+#+end_src
+
+#+RESULTS: Rvar
+: [1] 2
+
+#+begin_src python :results output :session :exports both :var x=Rvar
+print(x)
+#+end_src
+
+#+RESULTS:
+: [1] 2
+
+* Un exemple (un peu) plus avancé
+Passer un dataframe de R vers Python est un peu moins aisé, car il s'agit d'un type assez complexe pour ces deux langages de programmation, qui n'est pas géré nativement par Org mode. Il faut donc quelques manipulations supplémentaires, mais cela reste globalement accessible et rapide.
+
+** Préparer son dataframe avec R
+On va extraire ici un sous-ensemble du fameux jeu de données ~iris~ nativement inclus dans R sous forme de dataframe, pour ensuite le transférer vers Python.
+
+#+NAME: data-iris
+#+begin_src R :results value table :session *R* :exports none :colnames yes
+data(iris)
+## Ne retenir que 15 fleurs (5 de chaque espèce) :
+dat <- iris[c(1:5, 51:55, 101:105), ]
+dat
+#+end_src
+
+#+RESULTS: data-iris
+| Sepal.Length | Sepal.Width | Petal.Length | Petal.Width | Species    |
+|--------------+-------------+--------------+-------------+------------|
+|          5.1 |         3.5 |          1.4 |         0.2 | setosa     |
+|          4.9 |           3 |          1.4 |         0.2 | setosa     |
+|          4.7 |         3.2 |          1.3 |         0.2 | setosa     |
+|          4.6 |         3.1 |          1.5 |         0.2 | setosa     |
+|            5 |         3.6 |          1.4 |         0.2 | setosa     |
+|            7 |         3.2 |          4.7 |         1.4 | versicolor |
+|          6.4 |         3.2 |          4.5 |         1.5 | versicolor |
+|          6.9 |         3.1 |          4.9 |         1.5 | versicolor |
+|          5.5 |         2.3 |            4 |         1.3 | versicolor |
+|          6.5 |         2.8 |          4.6 |         1.5 | versicolor |
+|          6.3 |         3.3 |            6 |         2.5 | virginica  |
+|          5.8 |         2.7 |          5.1 |         1.9 | virginica  |
+|          7.1 |           3 |          5.9 |         2.1 | virginica  |
+|          6.3 |         2.9 |          5.6 |         1.8 | virginica  |
+|          6.5 |           3 |          5.8 |         2.2 | virginica  |
+
+** Le transférer vers Python
+*** Première tentative ("naïve")
+Si on essaie de passer ce dataframe en Python, il sera nativement reconnu comme /liste/ par Python (ce qui n'est pas anormal, étant donné que la classe ~data.frame~ en R n'est rien d'autre qu'une surcouche du mode fondamental ~list~) :
+
+#+begin_src python :results output :session :exports both :var rdata=data-iris :colnames no
+## En Python...
+print(type(rdata))              # on obtient une liste
+#+end_src
+
+#+RESULTS:
+: <class 'list'>
+
+Pour s'en convaincre, on peut carrément afficher le contenu de cette liste :
+#+begin_src python :results output :session :exports both
+print(rdata)
+#+end_src
+
+#+RESULTS:
+: [['Sepal.Length', 'Sepal.Width', 'Petal.Length', 'Petal.Width', 'Species'], [5.1, 3.5, 1.4, 0.2, 'setosa'], [4.9, 3, 1.4, 0.2, 'setosa'], [4.7, 3.2, 1.3, 0.2, 'setosa'], [4.6, 3.1, 1.5, 0.2, 'setosa'], [5, 3.6, 1.4, 0.2, 'setosa'], [7, 3.2, 4.7, 1.4, 'versicolor'], [6.4, 3.2, 4.5, 1.5, 'versicolor'], [6.9, 3.1, 4.9, 1.5, 'versicolor'], [5.5, 2.3, 4, 1.3, 'versicolor'], [6.5, 2.8, 4.6, 1.5, 'versicolor'], [6.3, 3.3, 6, 2.5, 'virginica'], [5.8, 2.7, 5.1, 1.9, 'virginica'], [7.1, 3, 5.9, 2.1, 'virginica'], [6.3, 2.9, 5.6, 1.8, 'virginica'], [6.5, 3, 5.8, 2.2, 'virginica']]
+
+*** "La" solution
+En Python, le type dataframe est géré par la librairie ~pandas~ : il suffit simplement de convertir cette liste en dataframe grâce à cette librairie: 
+
+#+begin_src python :results value :session :exports both
+import pandas as pd
+df = pd.DataFrame(rdata[1:], columns=rdata[0])
+df.head()
+#+end_src
+
+#+RESULTS:
+:    Sepal.Length  Sepal.Width  Petal.Length  Petal.Width Species
+: 0           5.1          3.5           1.4          0.2  setosa
+: 1           4.9          3.0           1.4          0.2  setosa
+: 2           4.7          3.2           1.3          0.2  setosa
+: 3           4.6          3.1           1.5          0.2  setosa
+: 4           5.0          3.6           1.4          0.2  setosa
+
+Et voilà !
+
+** Utilisation de ce dataframe en Python
+On peut tracer un nuage de points croisant largeur et longueur des pétales pour prouver que ce dataframe a correctement été pris en compte par Python :
+
+#+begin_src python :results file :session :exports results
+import matplotlib.pyplot as plt
+plt.scatter(df["Petal.Length"], df["Petal.Width"], c='purple')
+plt.savefig("biplot_iris.png")
+"biplot_iris.png"
+#+end_src
+
+#+CAPTION: Nuage de points avec Python.
+#+RESULTS:
+[[file:biplot_iris.png]]
