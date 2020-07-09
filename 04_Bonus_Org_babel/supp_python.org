@@ -41,11 +41,38 @@ On crée ci-dessous un vecteur de 20 valeurs générées aléatoirement selon un
 z <- rnorm(20, 0, 5)
 #+end_src
 
+#+RESULTS: normValues
+|   0.62942188584248 |
+|  -9.42075348810809 |
+|  -6.48510283269082 |
+|  -8.46504787291947 |
+|  -2.65022561509771 |
+|  -5.27643453034466 |
+|  -1.97635947037277 |
+|  0.831647308922712 |
+|   3.91498770409709 |
+| -0.386231507585761 |
+|  -1.43024602781308 |
+|   9.97429122091322 |
+|   3.51094168869385 |
+|   -2.0710937123062 |
+|  -8.15814115473687 |
+|   4.69069394199505 |
+|   9.62806282176673 |
+|  -10.1554926084091 |
+|  -0.93248975698685 |
+|   4.11998638065857 |
+
 puis on teste leur normalité avec Octave :
 #+begin_src octave :results output :session :exports both :var z=normValues
 pkg load statistics
 kolmogorov_smirnov_test(z, "norm")
 #+end_src
+
+#+RESULTS:
+: 
+: pval: 0.00420078
+: ans =  0.0042008
 
 * Un exemple (un peu) plus avancé
 Passer un dataframe de R vers Python est un peu moins aisé, car il s'agit d'un type assez complexe pour ces deux langages de programmation, qui n'est pas géré nativement par Org mode. Il faut donc quelques manipulations supplémentaires, mais cela reste globalement accessible et rapide.
@@ -129,6 +156,5 @@ plt.savefig("biplot_iris.png")
 "biplot_iris.png"
 #+end_src
 
-#+CAPTION: Nuage de points avec Python.
 #+RESULTS:
 [[file:biplot_iris.png]]
