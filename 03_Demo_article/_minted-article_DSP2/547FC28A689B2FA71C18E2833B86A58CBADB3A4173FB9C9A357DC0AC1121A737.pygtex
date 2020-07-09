@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{dat} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{read.csv}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}./data\PYGZus{}DSP2.csv\PYGZdq{}}\PYG{p}{,}
+                \PYG{n}{header} \PYG{o}{=} \PYG{k+kc}{TRUE}\PYG{p}{,} \PYG{n}{row.names} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{,}
+                \PYG{n}{sep} \PYG{o}{=} \PYG{l+s}{\PYGZdq{};\PYGZdq{}}\PYG{p}{,} \PYG{n}{dec} \PYG{o}{=} \PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{p}{,}
+                \PYG{n}{stringsAsFactors} \PYG{o}{=} \PYG{k+kc}{TRUE}\PYG{p}{,}
+                \PYG{n}{na.strings} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{fileEncoding} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{table}\PYG{p}{(}\PYG{n}{dat}\PYG{o}{\PYGZdl{}}\PYG{n}{Collection}\PYG{p}{,} \PYG{n}{dat}\PYG{o}{\PYGZdl{}}\PYG{n}{Sex}\PYG{p}{)}
+\end{Verbatim}

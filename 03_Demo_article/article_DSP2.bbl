@@ -1,3 +1,32 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{2}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Bruzek(2002)}]{bruzek2002_MethodVisualDetermination}
+\bibinfo{author}{Bruzek, J.} (\bibinfo{year}{2002}).
+\newblock \bibinfo{title}{A method for visual determination of sex, using the
+  human hip bone}.
+\newblock {\it \bibinfo{journal}{American Journal of Physical Anthropology}\/},
+   {\it \bibinfo{volume}{117}\/}, \bibinfo{pages}{157--168}.
+  \DOIprefix\doi{10.1002/ajpa.10012}.
+%Type = Article
+\bibitem[{L{\^e} et~al.(2008)L{\^e}, Josse \&
+  Husson}]{le2008_FactoMineRPackageMultivariate}
+\bibinfo{author}{L{\^e}, S.}, \bibinfo{author}{Josse, J.}, \&
+  \bibinfo{author}{Husson, F.} (\bibinfo{year}{2008}).
+\newblock \bibinfo{title}{{{FactoMineR}}: {{An R Package}} for {{Multivariate
+  Analysis}}}.
+\newblock {\it \bibinfo{journal}{Journal of Statistical Software}\/},  {\it
+  \bibinfo{volume}{25}\/}. \DOIprefix\doi{10.18637/jss.v025.i01}.
 
 \end{thebibliography}

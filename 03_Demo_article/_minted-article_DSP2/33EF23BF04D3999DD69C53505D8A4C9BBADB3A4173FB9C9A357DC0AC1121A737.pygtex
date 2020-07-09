@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{2}
+\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+\end{Verbatim}

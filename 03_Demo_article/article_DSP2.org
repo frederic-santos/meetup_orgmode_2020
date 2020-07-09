@@ -1,6 +1,10 @@
+#+LATEX_CLASS: elsarticle
 #+LATEX_HEADER: \usepackage{minted}             % pour de jolis blocs de code
-#+LATEX_HEADER: \usepackage[natbibapa]{apacite} % /!\ provisoire !
-#+OPTIONS: toc:nil author:nil
+#+LATEX_HEADER: \usepackage{lineno,hyperref}
+#+LATEX_HEADER: \modulolinenumbers[5]
+#+LATEX_HEADER: \journal{Journal of \LaTeX\ Templates}
+#+LATEX_HEADER: \bibliographystyle{model5-names}\biboptions{authoryear}
+#+OPTIONS: toc:nil author:nil todo:nil
 
 * Arrière-boutique :noexport:
 On donne ici des info "privées", qui ne figureront pas sur l'export final, mais qui sont importantes pour le projet.
@@ -17,13 +21,125 @@ On donne ici des info "privées", qui ne figureront pas sur l'export final, mais
 [[./cover_letter.org]]
 
 ** TODO Check-list avant soumission [0/3]
+   SCHEDULED: <2020-07-10 ven.>
 - [ ] Trouver des mots-clés
 - [ ] Remplir le /data availability statement/
 - [ ] Héberger les données sur Zenodo
 
-* Introduction
+** R config
+   #+begin_src R :results output :session *R* :exports both
+library(dplyr)
+library(FactoMineR)
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+
+   Attachement du package : ‘dplyr’
+
+   The following objects are masked from ‘package:stats’:
+
+       filter, lag
+
+   The following objects are masked from ‘package:base’:
+
+       intersect, setdiff, setequal, union
+   #+end_example
+
+* Frontmatter :ignore:
+  #+begin_export latex
+\begin{frontmatter}
+
+\title{DSP2 method}
+\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+%% Group authors per affiliation:
+\author{Elsevier\fnref{myfootnote}}
+\address{Radarweg 29, Amsterdam}
+\fntext[myfootnote]{Since 1880.}
+
+%% or include affiliations in footnotes:
+\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
+\ead[url]{www.elsevier.com}
+
+\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\ead{support@elsevier.com}
+
+\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
+\address[mysecondaryaddress]{360 Park Avenue South, New York}
+
+\begin{abstract}
+This template helps you to create a properly formatted \LaTeX\ manuscript.
+\end{abstract}
+
+\begin{keyword}
+\texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+\MSC[2010] 00-01\sep  99-00
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+  #+end_export
+* DONE Introduction
+  CLOSED: [2020-07-09 jeu. 15:12]
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.
 
+* Material and methods
+** DONE Sample
+   CLOSED: [2020-07-09 jeu. 15:12]
+The reference sample used in this study has been collected by cite:bruzek2002_MethodVisualDetermination. It is described in Table ref:tab-sample.
+
+#+begin_src R :results table :session *R* :exports results :rownames yes :colnames yes :cache yes
+dat <- read.csv("./data_DSP2.csv",
+                header = TRUE, row.names = 1,
+                sep = ";", dec = ",",
+                stringsAsFactors = TRUE,
+                na.strings = "", fileEncoding = "utf-8")
+table(dat$Collection, dat$Sex)
+#+end_src
+
+#+CAPTION: Description of the reference sample. label:tab-sample
+#+RESULTS[3f33acfbbeba65826cfcc2a966c344a0970ae0bb]:
+|         |  F |  M |
+|---------+----+----|
+| Geneva  | 64 | 70 |
+| Maxwell | 49 | 58 |
+
+** IN-PROGRESS Data acquisition
+   DEADLINE: <2020-07-10 ven.>
+The measurement PUM is illustrated on Figure ref:fig-pum.
+
+#+CAPTION: Measurement PUM. label:fig-pum
+#+ATTR_LATEX: :width 0.5 \textwidth
+[[./pum.png]]
+
+** IN-PROGRESS Statistical analysis
+   DEADLINE: <2020-07-14 mar.>
+We performed a PCA using the R package ~FactoMineR~ citep:le2008_FactoMineRPackageMultivariate.
+
+* Results
+** DONE Global morphology
+   CLOSED: [2020-07-09 jeu. 15:13]
+A PCA is shown on Figure ref:fig-pca.
+
+#+begin_src R :results graphics file :file PCA.png :exports results :width 600 :height 400 :session *R*
+res_pca <- PCA(dat, quali.sup = 1:2, graph = FALSE)
+plot(res_pca, habillage = 2, label = "none")
+#+end_src
+
+#+CAPTION: A PCA on the reference sample. label:fig-pca
+#+RESULTS:
+[[file:PCA.png]]
+
+** TODO Differences between the two collections
+
+* IN-PROGRESS Discussion
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+* DONE Conclusion
+  CLOSED: [2020-07-09 jeu. 15:13]
+Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
 
 bibliography:~/PACEA_MyCore/complete_biblio.bib
-bibliographystyle:apacite
