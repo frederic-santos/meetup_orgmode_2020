@@ -1,0 +1,34 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Vacca%
+\ \BBA {} Di~Vella%
+}{%
+Vacca%
+\ \BBA {} Di~Vella%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+vacca2012_MetricCharacterizationHuman}
+\APACinsertmetastar {%
+vacca2012_MetricCharacterizationHuman}%
+\begin{APACrefauthors}%
+Vacca, E.%
+\BCBT {}\ \BBA {} Di~Vella, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Metric Characterization of the Human Coxal Bone on a
+  Recent {{Italian}} Sample and Multivariate Discriminant Analysis to Determine
+  Sex} {Metric characterization of the human coxal bone on a recent {{Italian}}
+  sample and multivariate discriminant analysis to determine sex}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Forensic Science
+  International}{222}{1-3}{401.e1-401.e9}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.forsciint.2012.06.014} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

@@ -12,14 +12,17 @@ Dear Editorial Board of the /Journal of Archaeological Science/,
 
 \bigskip
 
-Please find herewith my manuscript entitled ``DSP2 method is so damn' cool!'', which I am submitting for publication in your journal as a Joke article. 
+Please find herewith my manuscript entitled ``DSP2 method is so damn' cool!'', which I am submitting for publication in your journal as a Joke article.
 
-Some recent research articles have proposed methodological advances for sex estimation using the human os coxae (*insérer refs ici*), but as you will see, my article is much better.
+Some recent research articles have proposed methodological advances for sex estimation using the human os coxae citep:vacca2012_MetricCharacterizationHuman, but as you will see, my article is much better.
 
 \bigskip
 
-I look forward to hearing from you. 
+I look forward to hearing from you.
 
 Yours sincerely,
  
 Frédéric Santos
+
+bibliography:~/PACEA_MyCore/complete_biblio.bib
+bibliographystyle:apacite

@@ -1,11 +1,11 @@
-#+TITLE: Interaction R/Python en Org mode
+#+TITLE: Interaction entre plusieurs langage avec Org-Babel
 #+AUTHOR: Frédéric Santos
 #+STARTUP: content
 
-On présente ici des exemples simples de programmation lettrée Org mode, dans lesquels on fait passer aisément des variables de R vers Python (ou vice versa).
+On présente ici des exemples simples de programmation lettrée Org mode, dans lesquels on fait passer aisément des variables d'un langage à l'autre (principalement entre R et Python ici).
 Il est à noter que la procédure exposée ici fonctionne pour n'importe quelle autre paire de langages de programmation supportés par Org mode.
 
-* Un exemple simple (simpliste ?)
+* R vers Python : un exemple simple
 ** Démarche
 Voici la procédure pour déclarer une variable en R, puis la passer en Python :
 - nommer le bloc de code produisant le résultat R que l'on souhaite transférer en Python (on le nomme avec la balise ~#+NAME~) ;
@@ -31,6 +31,21 @@ print(x)
 
 #+RESULTS:
 : [1] 2
+
+* R vers Octave : autre exemple simple
+On crée ci-dessous un vecteur de 20 valeurs générées aléatoirement selon une loi normale :
+
+#+NAME: normValues
+#+begin_src R :results value :session *R* :exports both
+## Générer 20 valeurs ~ N(0, 5) avec R :
+z <- rnorm(20, 0, 5)
+#+end_src
+
+puis on teste leur normalité avec Octave :
+#+begin_src octave :results output :session :exports both :var z=normValues
+pkg load statistics
+kolmogorov_smirnov_test(z, "norm")
+#+end_src
 
 * Un exemple (un peu) plus avancé
 Passer un dataframe de R vers Python est un peu moins aisé, car il s'agit d'un type assez complexe pour ces deux langages de programmation, qui n'est pas géré nativement par Org mode. Il faut donc quelques manipulations supplémentaires, mais cela reste globalement accessible et rapide.
