@@ -3,6 +3,8 @@
 
 L'Urfist Bordeaux propose en juillet 2020 [[https://sygefor.reseau-urfist.fr/#/training/8617/9807][un meetup en deux volets sur Orgmode]] et son application à la recherche reproductible. Ce dépôt contient divers fichiers à disposition des participants au meetup.
 
+À titre purement informatif, un exemple (relativement) minimal de fichier d'initialisation pour Emacs (fichier ~init.el~) est également fourni. (Il s'agit essentiellement d'une version réduite du fichier d'initialisation que j'utilise au quotidien, ce qui vous permettra de reproduire les manips du meetup avec une configuration d'Emacs proche de la mienne.)
+
 Tous les fichiers sont sous licence [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]].
 
 * Cloner ce répertoire
