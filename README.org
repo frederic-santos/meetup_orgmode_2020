@@ -33,6 +33,8 @@ Pour ceux qui ne souhaitent pas coder en Lisp pour personnaliser Emacs, des conf
 
 Avis personnel : cela peut incontestablement aider les débutants, car le Emacs "out of the box" ou "vanilla" (sans aucune personnalisation) peut sembler très rebutant. Ces starter kits permettent de débuter avec des paramétrages plus agréables que le paramétrage par défaut. Toutefois, il ne faut pas perdre de vue que *la* grande force d'Emacs est la capacité à être personnalisé sans limite, et à se plier à la moindre de vos préférences ou habitudes de travail. Ces starter kits ne le pourront pas : seul un paramétrage par vos soins fera d'Emacs un compagnon vraiment utile pour vous. "L'esprit Emacs" consiste plutôt à considérer ces starter kits comme des points de départ à retravailler, et pas comme des produits finis.
 
+Point positif en revanche : cela peut vous éviter [[https://www.reddit.com/r/emacs/comments/hgcci7/its_a_constant_battle/][de sombrer dans une Emacsite]].
+
 ** Généralités sur Org mode
 Deux ressources essentielles :
 - la [[https://www.youtube.com/playlist?list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE][formidable chaîne Youtube de Rainer König]] sur Org mode
@@ -48,3 +50,7 @@ Quelques billets de blog pour les fonctionnalités d'agenda et de gestion des t�
 - [[http://archive.indianstatistics.org/tools/orgpapers.pdf][Using Emacs, Org-mode and R for Research Writing]], un (excellent !) tutoriel complet par Vikas Rawal
 - [[http://cachestocaches.com/2018/6/org-literate-programming/][Literate programming with Org mode]], un billet de blog par Greg J. Stein
 - [[https://www.johndcook.com/blog/2012/02/09/python-org-mode/][Running Python and R inside Emacs]], un très bref billet de blog par John D. Cook
+
+** Divers
+- [[https://github.com/orgzly/orgzly-android][Orgzly]], une appli Android dans l'esprit Org mode
+- [[http://www.mkbehr.com/posts/a-research-workflow-with-zotero-and-org-mode/][Une note de blog détaillée]] sur l'interaction entre Zotero et Org mode.
